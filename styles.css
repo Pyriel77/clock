@@ -97,6 +97,7 @@ body {
 .button-container {
   background-color: darkblue;
   border: 5px solid #fff;
+  border-radius: 10px;
   width: 50%;
   margin: 0 auto;
   display: flex;

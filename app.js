@@ -11,7 +11,7 @@ const setClock = () => {
   let alterTime = new Date();
   modifier = Number(localStorage.getItem('mod'));
   alterTime.setTime(now.getTime() + modifier);
-  console.log(alterTime);
+
   const sec = alterTime.getSeconds() / 60;
   const min = (sec + alterTime.getMinutes()) / 60;
   const hour = (min + alterTime.getHours()) / 12;
