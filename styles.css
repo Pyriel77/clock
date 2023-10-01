@@ -15,6 +15,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
 }
 
 .clock {
@@ -22,25 +23,31 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow: hidden;
   background-color: darkblue;
   color: #fff;
   border: 5px solid #fff;
   border-radius: 50%;
-  width: 400px;
-  height: 400px;
+  width: 30rem;
+  max-width: 1000px;
+  height: 30rem;
   font-size: 28px;
   font-weight: bold;
   font-family: Comissioner, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* .clock:after {
+.clock::after {
   content: '';
-  width: 50px;
-  height: 50px;
-  border-color: #fff;
-  border-radius: 50%;
   position: absolute;
-} */
+  background-color: azure;
+  z-index: 9;
+  width: 35px;
+  height: 35px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
 
 .clock ul li {
   position: absolute;
@@ -67,20 +74,22 @@ body {
   transform: translateX(-50%) rotate(calc(var(--rot) * 1deg));
 }
 
-.clock .needle.second {
+.clock .second {
   width: 3px;
   height: 45%;
   background-color: red;
 }
 
-.clock .needle.minute {
+.clock .minute {
   width: 7px;
   height: 40%;
   background-color: aliceblue;
+  border: 1px solid #000;
 }
 
-.clock .needle.hour {
+.clock .hour {
   width: 10px;
   height: 30%;
   background-color: azure;
+  border: 1px solid #000;
 }
