@@ -9,26 +9,30 @@
 </head>
 
 <body>
-    <div class="clock" id="clock">
-        <div class="needle hour" hour-needle></div>
-        <div class="needle minute" minute-needle></div>
-        <div class="needle second" second-needle></div>
-        <ul>
-            <li style="--h:1"><span>1</span></li>
-            <li style="--h:2"><span>2</span></li>
-            <li style="--h:3"><span>3</span></li>
-            <li style="--h:4"><span>4</span></li>
-            <li style="--h:5"><span>5</span></li>
-            <li style="--h:6"><span>6</span></li>
-            <li style="--h:7"><span>7</span></li>
-            <li style="--h:8"><span>8</span></li>
-            <li style="--h:9"><span>9</span></li>
-            <li style="--h:10"><span>10</span></li>
-            <li style="--h:11"><span>11</span></li>
-            <li style="--h:12"><span>12</span></li>
-        </ul>
-        <button>+5</button>
-        <button>-10</button>
+    <div class="app-container" id="clock">
+        <div class="clock-container">
+            <div class="needle hour" hour-needle></div>
+            <div class="needle minute" minute-needle></div>
+            <div class="needle second" second-needle></div>
+            <ul>
+                <li style="--h:1"><span>1</span></li>
+                <li style="--h:2"><span>2</span></li>
+                <li style="--h:3"><span>3</span></li>
+                <li style="--h:4"><span>4</span></li>
+                <li style="--h:5"><span>5</span></li>
+                <li style="--h:6"><span>6</span></li>
+                <li style="--h:7"><span>7</span></li>
+                <li style="--h:8"><span>8</span></li>
+                <li style="--h:9"><span>9</span></li>
+                <li style="--h:10"><span>10</span></li>
+                <li style="--h:11"><span>11</span></li>
+                <li style="--h:12"><span>12</span></li>
+            </ul>
+        </div>
+        <div class="button-container">
+            <button class="plus">+ 5 mins</button>
+            <button class="minus">- 10 mins</button>
+        </div>
     </div>
 </body>
 <script src="app.js"></script>
