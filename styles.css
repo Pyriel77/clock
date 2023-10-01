@@ -6,9 +6,16 @@
 
 body {
   background-color: cadetblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   background-color: darkblue;
   color: #fff;
   border: 5px solid #fff;
@@ -17,4 +24,12 @@ body {
   height: 400px;
   font-size: 28px;
   font-weight: bold;
+}
+
+.clock ul li {
+  position: absolute;
+  list-style: none;
+  text-align: center;
+  transform: rotate(calc(30deg * var(--h)));
+  inset: 5px;
 }
