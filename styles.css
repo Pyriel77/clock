@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner&family=Poppins&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +7,11 @@
 }
 
 body {
-  background-color: cadetblue;
+  background: linear-gradient(
+    to right,
+    hsl(239, 100%, 23%),
+    hsl(190, 100%, 50%)
+  );
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,7 +30,17 @@ body {
   height: 400px;
   font-size: 28px;
   font-weight: bold;
+  font-family: Comissioner, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+/* .clock:after {
+  content: '';
+  width: 50px;
+  height: 50px;
+  border-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+} */
 
 .clock ul li {
   position: absolute;
@@ -32,4 +48,39 @@ body {
   text-align: center;
   transform: rotate(calc(30deg * var(--h)));
   inset: 5px;
+}
+
+.clock ul li span {
+  display: inline-block;
+  transform: rotate(calc(-30deg * var(--h)));
+}
+
+.clock .needle {
+  --rot: 0;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transform-origin: bottom;
+  z-index: 10;
+  transform: translateX(-50%) rotate(calc(var(--rot) * 1deg));
+}
+
+.clock .needle.second {
+  width: 3px;
+  height: 45%;
+  background-color: red;
+}
+
+.clock .needle.minute {
+  width: 7px;
+  height: 40%;
+  background-color: aliceblue;
+}
+
+.clock .needle.hour {
+  width: 10px;
+  height: 30%;
+  background-color: azure;
 }
